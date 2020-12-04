@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Clothing } from './Clothing';
+
 
 @Component({
   selector: 'app-clothing-list',
@@ -7,13 +9,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClothingListComponent implements OnInit {
 
-  clothing = { 
-    "imagen" : "assets/img/princesa.jpg",
-    "nombre" : "Princesa",
-    "tipo" : "Remera",
-    "precio" : "$795",
-    "stock" : "4"
-  }
+  clothings : Clothing[] = [ 
+    { 
+    nombre : "Princesa",
+    tipo : "Remera",
+    precio : 795,
+    stock :  4,
+    imagen : "assets/img/princesa.jpg"
+    },
+    { 
+    nombre : "Hell baby",
+    tipo : "Remera",
+    precio : 1050,
+    stock :  5,
+    imagen : "assets/img/hellbaby.jpg"
+    },
+    { 
+      nombre : "Frunce",
+      tipo : "top",
+      precio : 1530,
+      stock :  6,
+      imagen : "assets/img/frunce.jpeg"
+      }
+  ]
+
   constructor() { }
 
   ngOnInit(): void {

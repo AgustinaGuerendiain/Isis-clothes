@@ -9,7 +9,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
+        <tr *ngFor="let clothing of clothings">
             <td><img [src]="clothing.imagen" [alt]="clothing.nombre"></td>
             <td>{{clothing.nombre}}</td>
             <td>{{clothing.tipo}}</td>
