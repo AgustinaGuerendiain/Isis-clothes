@@ -1,12 +1,13 @@
-<table class="table text-center">
-    <thead>
+<table class="table text-center ">
+    <thead class="">
         <tr>
             <th>Imagen</th>
             <th>Nombre</th>
             <th>Tipo</th>
             <th>Precio</th>
             <th>Stock</th>
-            <th>Compra</th>
+            <th>Cantidad</th>
+            <th>Comprar</th>
         </tr>
     </thead>
     <tbody>
@@ -26,9 +27,12 @@
                 </ng-template>
             </td>
             <td> 
-               <app-input-integer (maxReached)="maxReached($event)" [cantidad]="clothing.cantidad" [max]="clothing.stock" *ngIf="clothing.stock">
-
+               <app-input-integer (maxReached)="maxReached($event)" [(cantidad)]="clothing.cantidad" [max]="clothing.stock" *ngIf="clothing.stock">
+                
                </app-input-integer>
+            </td>
+            <td>
+                <button class="btn btn-light btn-sm" (click)="addToCart(clothing)">🛒</button>
             </td>
         </tr>
     </tbody>
