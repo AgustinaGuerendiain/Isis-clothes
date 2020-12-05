@@ -9,12 +9,21 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let clothing of clothings">
+        <tr *ngFor="let clothing of clothings" [ngClass]="{'oferta': clothing.oferta}">
             <td><img [src]="clothing.imagen" [alt]="clothing.nombre"></td>
             <td>{{clothing.nombre}}</td>
             <td>{{clothing.tipo}}</td>
             <td>{{clothing.precio}}</td>
-            <td>{{clothing.stock}}</td>
+            <td>
+                <span class="badge badge-dark">
+                    <ng-container *ngIf="clothing.stock==0; else stockDisponible">
+                        Sin stock
+                    </ng-container> 
+                </span>
+                <ng-template #stockDisponible>
+                    Stock disponible
+                </ng-template>
+            </td>
         </tr>
     </tbody>
 </table>

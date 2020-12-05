@@ -15,21 +15,24 @@ export class ClothingListComponent implements OnInit {
     tipo : "Remera",
     precio : 795,
     stock :  4,
-    imagen : "assets/img/princesa.jpg"
+    imagen : "assets/img/princesa.jpg",
+    oferta : false,
     },
     { 
     nombre : "Hell baby",
     tipo : "Remera",
     precio : 1050,
-    stock :  5,
-    imagen : "assets/img/hellbaby.jpg"
+    stock :  0,
+    imagen : "assets/img/hellbaby.jpg",
+    oferta : false,
     },
     { 
       nombre : "Frunce",
       tipo : "top",
       precio : 1530,
       stock :  6,
-      imagen : "assets/img/frunce.jpeg"
+      imagen : "assets/img/frunce.jpeg",
+      oferta : true,
       }
   ]
 

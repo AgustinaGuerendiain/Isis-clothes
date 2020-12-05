@@ -3,5 +3,6 @@ export interface Clothing {
     tipo : string,
     precio : number,
     stock : number,
-    imagen : string
+    imagen : string,
+    oferta : boolean,
 }
