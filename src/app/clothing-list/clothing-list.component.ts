@@ -17,6 +17,7 @@ export class ClothingListComponent implements OnInit {
     stock :  4,
     imagen : "assets/img/princesa.jpg",
     oferta : false,
+    cantidad : 0,
     },
     { 
     nombre : "Hell baby",
@@ -25,14 +26,16 @@ export class ClothingListComponent implements OnInit {
     stock :  0,
     imagen : "assets/img/hellbaby.jpg",
     oferta : false,
+    cantidad : 0,
     },
     { 
       nombre : "Frunce",
-      tipo : "top",
+      tipo : "Top",
       precio : 1530,
       stock :  6,
       imagen : "assets/img/frunce.jpeg",
       oferta : true,
+      cantidad : 0,
       }
   ]
 
@@ -41,4 +44,25 @@ export class ClothingListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  upCantidad(clothing : Clothing): void {
+    if (clothing.cantidad < clothing.stock) {
+      clothing.cantidad++;
+    }
+    
+  }
+
+  downCantidad(clothing : Clothing): void {
+    if (clothing.cantidad > 0) {
+      clothing.cantidad--;
+    }
+  }
+
+  changeCantidad(event, clothing : Clothing): void {
+    console.log(event.code);
+  }
+
+
+
 }
+
+
