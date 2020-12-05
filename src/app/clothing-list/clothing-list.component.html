@@ -26,16 +26,9 @@
                 </ng-template>
             </td>
             <td> 
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <button type="button" class="btn btn-light btn-sm" (click)="downCantidad(clothing)">-</button>
-                    </div>
-                        <input type="type" class="text-center"
-                        [(ngModel)]="clothing.cantidad"> 
-                    <div class="input-group-append">
-                        <button type="button" class="btn btn-light btn-sm" (click)="upCantidad(clothing)">+</button> 
-                    </div>
-                </div>
+               <app-input-integer (maxReached)="maxReached($event)" [cantidad]="clothing.cantidad" [max]="clothing.stock" *ngIf="clothing.stock">
+
+               </app-input-integer>
             </td>
         </tr>
     </tbody>

@@ -44,23 +44,9 @@ export class ClothingListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  upCantidad(clothing : Clothing): void {
-    if (clothing.cantidad < clothing.stock) {
-      clothing.cantidad++;
-    }
-    
+  maxReached(mensaje: string){
+    alert(mensaje);
   }
-
-  downCantidad(clothing : Clothing): void {
-    if (clothing.cantidad > 0) {
-      clothing.cantidad--;
-    }
-  }
-
-  changeCantidad(event, clothing : Clothing): void {
-    console.log(event.code);
-  }
-
 
 
 }

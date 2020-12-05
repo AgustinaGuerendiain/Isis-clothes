@@ -7,7 +7,8 @@ import { ClothingListComponent } from './clothing-list/clothing-list.component';
 import { FormsModule } from '@angular/forms';
 import { IsisContactoComponent } from './isis-contacto/isis-contacto.component';
 import { IsisClothingComponent } from './isis-clothing/isis-clothing.component';
-import { CartComponent } from './cart/cart.component'
+import { CartComponent } from './cart/cart.component';
+import { InputIntegerComponent } from './input-integer/input-integer.component'
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { CartComponent } from './cart/cart.component'
     IsisContactoComponent,
     IsisClothingComponent,
     CartComponent,
+    InputIntegerComponent,
   ],
   imports: [
     BrowserModule,
