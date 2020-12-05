@@ -1,5 +1,10 @@
 # Isis
 
+Proyecto para el seminario ANGULAR de la carrera TUDAI, Facultad de Ciencias Exactas, UNICEN.2020
+-La idea es seguir incorporando nuevas funcionalidades a futuro
+
+----------------------------------------------------------------------------------------------------------------------------
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
 
 ## Development server
