@@ -1,6 +1,12 @@
-<p>cart works!</p>
-<ul>
-    <li *ngFor="let clothing of cartList$ | async ">
-        {{clothing.nombre}}: {{clothing.cantidad}}
-    </li>
-</ul>
+<table class="table text-center ">
+    <thead>
+        <th>Nombre</th>
+        <th>Cantidad</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let clothing of cartList$ | async ">
+            <td> {{clothing.nombre}} </td>
+            <td> {{clothing.cantidad}} </td>
+        </tr>
+    </tbody>
+</table>
